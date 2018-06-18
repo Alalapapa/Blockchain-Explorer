@@ -128,6 +128,7 @@ echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 ```
 
 ***Ot.Remove MongoDB.***
+
 *如果想卸载MongoDB，请谨慎操作*
 1. Stop MongoDB. `sudo service mongod stop`
 2. Remove Packages. `sudo apt-get purge mongodb-org*`
@@ -345,6 +346,7 @@ P.S. 报错 & 解决方案
 2. 选择`GNU nano 2.5.3`
 3. 输入`*/1 * * * * cd /home/pink/workspace/explorer && /usr/bin/nodejs scripts/sync.js index update > /dev/null 2>&1`
 4. 键入`Ctrl+x`-`Y`-`Enter`，保存
+5. 查看cron任务: `crontab -l`
 
 ### 拾、查看和使用区块链浏览器
 浏览器输入`http://[your ip]:3001`
