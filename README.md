@@ -23,7 +23,7 @@ Npm | v5.6.x
 
 ### 贰、为Ubuntu配置普通用户
 1. Create User: `sudo adduser [pink]`.
-2. Enter Twice Password.
+2. Enter Password Two Times.
 3. Grant **sudo** Privilege: `sudo usermod -a -G adm [pink]` `sudo usermod -a -G sudo  [pink]`.
 4. Change User: `su [pink]`.
 
@@ -136,9 +136,9 @@ echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 
 
 ### 伍、创建MongoDB数据库
-1. Enter MongoDB cli: `$ mongo`
-2. Create databse: `> use explorerdb`
-3. Create user with read/write access: `> db.createUser( { user: "iquidus", pwd: "3xp!0reR", roles: [ "readWrite" ] } )`
+1. Enter MongoDB cli: `mongo`
+2. Create databse: `use explorerdb`
+3. Create user with read/write access: `db.createUser( { user: "iquidus", pwd: "3xp!0reR", roles: [ "readWrite" ] } )`
 
 
 ### 陆、调整`*coind*`
@@ -146,9 +146,9 @@ echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 2. Kill ProcessId: `kill -9 [id]`
 3. Vim `~/.*coin/*coin.conf`
 ```
-addnode=115.***.***.116
+addnode=***.***.***.***
 rpcconnect=127.0.0.1
-rpcport=11111
+rpcport=****
 server=1
 gen=1
 rpcuser=****
@@ -173,16 +173,15 @@ rpcpassword=****
 5. Modify settings.json
 ```
 {
-  // name your instance!
-  "title": "Jtf-Mainnet",
+  "title": "Your-Mainnet",
 
   "address": "127.0.0.1:3001",
 
   // coin name
-  "coin": "JTF",
+  "coin": "***",
 
   // coin symbol
-  "symbol": "JTF",
+  "symbol": "***",
 
   // logo
   "logo": "/images/logo.png",
@@ -216,13 +215,13 @@ rpcpassword=****
   // wallet settings
   "wallet": {
     "host": "localhost",
-    "port": 11111,
+    "port": ****,
     "user": “****”,
     "pass": “****”
   },
 
   // confirmations
-  "confirmations": 24,
+  "confirmations": **,
 
   // language settings
   "locale": "locale/en.json",
@@ -250,9 +249,9 @@ rpcpassword=****
   // ensure links on API page are valid
   "api": {
     "blockindex": 1337,
-    "blockhash": "00000f0f9f2fdaa2b1afe45a496dd8da7c5ba7736491515a04f5300ad22ea670",
-    "txhash": "97a1bc41fdbfe459ebdbe7e39d3aa004d0e0939778019da9158c9eff3334b0b0",
-    "address": "jNHgLqyyK9bgRFrhn2F8nAzf9g4Wkh8mXR"
+    "blockhash": "00000f0f9f2fdaa2b1afe45a496d***a7c5ba7736491515a04f5300ad22ea670",
+    "txhash": "97a1bc41fdbfe459ebdbe7e39d3aa004d0e0939778019***158c9eff3334b0b0",
+    "address": "jNHgLqyyK9bgRFrhn2***Azf9g4Wkh8mXR"
   },
 
   // market settings
@@ -289,8 +288,8 @@ rpcpassword=****
   "googleplus": "yourgooglepluspage",
 
   //genesis
-  "genesis_tx": "f3059ade905ef43303d8217b92faade6ef5dca7bb0aa5a31e4080eb7b465bae8",
-  "genesis_block": "00000d025c7b1f9e3c0636f65d971a81687ca8af60c4ee60c4251c9e0de15572",
+  "genesis_tx": "f3059ade905ef43303d8217b92faade6e***ca7bb0aa5a31e4080eb7b465bae8",
+  "genesis_block": "00000d025c7b1f9e3***36f65d971a81687ca8af60c4ee60c4251c9e0de15572",
 
   //heavy (enable/disable additional heavy features)
   "heavy": false,
